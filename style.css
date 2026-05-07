@@ -3,70 +3,78 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #222; /* Darker background looks better for "explosions" */
+    background-color: #1a1a1a;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     overflow: hidden;
 }
 
-/* Hide all sections by default */
-#menu-container, 
-#game-container, 
-#settings-container, 
-#laptop-selection-container, 
-#creation-container {
+#menu-container, #game-container, #settings-container, 
+#laptop-selection-container, #creation-container {
     text-align: center;
-    display: none;
-    width: 100%;
+    display: none; /* JS will toggle this */
+    width: 90%;
     max-width: 500px;
 }
 
-/* Show the menu by default on load */
+/* Show only menu on start */
 #menu-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 #logo {
-    width: 250px;
-    margin-bottom: 20px;
-    align-self: center;
+    width: 200px;
+    margin: 0 auto 20px;
 }
 
 #laptop {
-    width: 100%;
-    max-width: 400px;
+    width: 350px;
     cursor: pointer;
-    transition: transform 0.1s ease;
+    transition: transform 0.05s;
 }
 
 #laptop:active {
-    transform: scale(0.95); /* Little vibration effect when clicking */
+    transform: scale(0.97);
 }
 
 #message {
     font-size: 20px;
     margin: 20px 0;
-    min-height: 50px;
+    font-weight: bold;
+    height: 60px;
+}
+
+#timer-shelf {
+    width: 100%;
+    background: #333;
+    height: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px solid #444;
+}
+
+#progress-bar {
+    width: 100%;
+    background: linear-gradient(90deg, #ff4d4d, #ff0000);
+    height: 100%;
+    width: 100%;
 }
 
 .button {
     padding: 12px 24px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
-    background-color: #ff0000;
+    background: #e60000;
     color: white;
     border: none;
-    border-radius: 5px;
-    transition: background 0.3s;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
 .button:hover {
-    background-color: #cc0000;
-}
-
-#pauseButton {
-    background-color: #555;
+    background: #ff1a1a;
 }
