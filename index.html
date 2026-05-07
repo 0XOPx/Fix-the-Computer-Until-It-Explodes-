@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Bartosz8291">
-    <meta name="theme-color" content="#ff0000">
-    <meta name="color-scheme" content="light dark">
-    <meta name="description" content="AN ONLINE GAME Fix the Computer Until It Explodes!!! Github: https://github.com/Bartosz8291/Fix-the-Computer-Until-It-Explodes-.git">
     <title>Fix the Computer Until It Explodes!!!</title>
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Menu Screen -->
     <div id="menu-container">
         <img id="logo" src="assets/logo.png" alt="Menu Logo">
         <button class="button" onclick="startGame()">Play</button>
@@ -19,23 +16,32 @@
         <button class="button" onclick="showSettings()">Settings</button>
     </div>
 
+    <!-- Game Screen -->
     <div id="game-container">
+        <div id="timer-shelf">
+            <div id="progress-bar"></div>
+        </div>
         <img id="laptop" src="assets/laptop.png" alt="Laptop">
-        <div id="message">Click to fix the laptop! BE CAREFUL UNTIL IT EXPLODES</div>
-        <button class="button" id="pauseButton">Pause</button>
+        <div id="message">Click to fix the laptop!</div>
+        <div class="controls">
+            <button class="button" id="pauseButton">Pause</button>
+            <button class="button" onclick="backToMenu()">Back to Menu</button>
+        </div>
     </div>
 
+    <!-- Settings Screen -->
     <div id="settings-container">
         <h2>Settings</h2>
         <label for="language">Select Language:</label>
         <select id="language" onchange="changeLanguage()">
             <option value="en">English</option>
             <option value="pl">Polski</option>
-            <!-- Add more languages here -->
         </select>
+        <br><br>
         <button class="button" onclick="backToMenu()">Back to Menu</button>
     </div>
 
+    <!-- Other Screens (Placeholders) -->
     <div id="laptop-selection-container">
         <h2>Laptop Selection</h2>
         <p>Coming Soon!!!</p>
@@ -49,10 +55,5 @@
     </div>
 
     <script src="script.js"></script>
-
-    <noscript>
-        <h1>JavaScript is required to play this game.</h1>
-        <p>Please enable JavaScript in your browser settings to use this application.</p>
-    </noscript>
 </body>
 </html>
